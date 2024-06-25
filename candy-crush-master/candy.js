@@ -1,5 +1,5 @@
 
-var candies = ["aurora db", "lake formation", "ec2", "Yellow", "Red", "Purple"];
+var candies = ["aurora db", "lake formation", "ec2", "s3", "event bridge", "cloud 9 ide"];
 var board = [];
 var rows = 9;
 var columns = 9;
