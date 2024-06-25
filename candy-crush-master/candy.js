@@ -35,6 +35,7 @@ setInterval(() => {
   document.getElementById("timer").innerText = timer;
   if (timer === 0) {
     alert("Time's up! Your score is " + score);
+    score=0;
   }
 }, 1000);
 
@@ -153,7 +154,7 @@ function crushThree() {
                 candy1.src = "./images/blank.png";
                 candy2.src = "./images/blank.png";
                 candy3.src = "./images/blank.png";
-                score += 10;
+                score += 30;
             }
         }
     }
@@ -168,7 +169,7 @@ function crushThree() {
                 candy1.src = "./images/blank.png";
                 candy2.src = "./images/blank.png";
                 candy3.src = "./images/blank.png";
-                score += 10;
+                score += 30;
             }
         }
     }
