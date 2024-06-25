@@ -3,7 +3,6 @@ var candies = ["aurora db", "lake formation", "ec2", "s3", "event bridge", "clou
 var board = [];
 var rows = 9;
 var columns = 9;
-var score = 0;
 
 var currTile;
 var otherTile;
@@ -18,6 +17,31 @@ window.onload = function() {
         slideCandy();
         generateCandy();
     }, 100);
+}
+const scoreElement = document.getElementById("score");
+const timerElement = document.getElementById("timer");
+
+let score = 0;
+let timer = 120;
+// Update score
+function updateScore(points) {
+  score += points;
+  scoreElement.textContent = score;
+}
+
+// Update timer
+setInterval(() => {
+  timer--;
+  document.getElementById("timer").innerText = timer;
+  if (timer === 0) {
+    alert("Time's up! Your score is " + score);
+  }
+}, 1000);
+
+// Start game
+function startGame() {
+  createGameBoard();
+  setInterval(updateTimer, 1000);
 }
 
 function randomCandy() {
@@ -129,7 +153,7 @@ function crushThree() {
                 candy1.src = "./images/blank.png";
                 candy2.src = "./images/blank.png";
                 candy3.src = "./images/blank.png";
-                score += 30;
+                score += 10;
             }
         }
     }
@@ -144,7 +168,7 @@ function crushThree() {
                 candy1.src = "./images/blank.png";
                 candy2.src = "./images/blank.png";
                 candy3.src = "./images/blank.png";
-                score += 30;
+                score += 10;
             }
         }
     }
@@ -201,4 +225,8 @@ function generateCandy() {
             board[0][c].src = "./images/" + randomCandy() + ".png";
         }
     }
+}
+function updateScore(points) {
+  score += points;
+  scoreElement.textContent = score;
 }
