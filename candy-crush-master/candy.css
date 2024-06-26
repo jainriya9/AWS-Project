@@ -4,6 +4,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0;
 }
 .score {
   font-size: 24px;
@@ -26,13 +28,22 @@ body {
     background-color: lightblue;
     border: 5px solid slategray;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 90px;
+    margin-top: 20px;
 }
 
 #board img {
     width: 50px;
     height: 50px;
+}
+
+#comments {
+    font-size: 20px;
+    margin-top: 10px; /* Adjust margin top as needed */
+    margin-bottom: 10px; /* Adjust margin bottom as needed */
+    color: yellow;
+    font-weight: bold; /* Make the text bold */
+    display: none;
 }
