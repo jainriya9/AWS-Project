@@ -183,10 +183,10 @@ window.onload = function() {
     function displayComment(service) {
         let comment = '';
         switch (service) {
-            case 'aurora db':
+            case 'RDS':
                 comment = 'Aurora DB service crushed!';
                 break;
-            case 'lake formation':
+            case 'lake':
                 comment = 'Lake Formation service crushed!';
                 break;
             case 'ec2':
@@ -195,10 +195,10 @@ window.onload = function() {
             case 's3':
                 comment = 'S3 service crushed!';
                 break;
-            case 'event bridge':
+            case 'event':
                 comment = 'EventBridge service crushed!';
                 break;
-            case 'cloud 9 ide':
+            case 'cloud9':
                 comment = 'Cloud9 IDE service crushed!';
                 break;
             default:

@@ -1,0 +1,36 @@
+
+
+body{
+    font-family: "Playfair Display", serif;
+    background: linear-gradient(140deg, rgba(213,151,210,1) 0%, rgba(254,184,208,1) 50%, rgba(252,176,69,1) 100%);;
+}
+.services{
+    display: block;
+}
+h1{
+    text-align: left;
+    font-size: 30px;
+    font-weight: 100;
+}
+.info{
+    font-size: 20px;
+    font-family:  "Playfair Display", serif;
+    font-weight: 100 ;
+    margin-top: 10px;
+    border: 2px solid #00afd4;
+    background-color: #cdf7ff;
+    padding: 10px 5px;
+    text-align: justify;
+    margin: 10px 20px;
+}
+.header{
+    display: flex;
+}
+.heading{
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: 200;
+}
+#images{
+    margin-left: 20px;
+}
