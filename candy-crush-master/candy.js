@@ -1,5 +1,4 @@
-
-var candies = ["aurora db", "lake formation", "ec2", "s3", "event bridge", "cloud 9 ide"];
+var candies = ["rds", "lake", "ec2", "s3", "event", "cloud9"];
 var board = [];
 var rows = 9;
 var columns = 9;
@@ -25,12 +24,15 @@ window.onload = function() {
     }, 100);
 
     // Update timer
-    setInterval(() => {
-        timer--;
-        timerElement.innerText = timer;
-        if (timer === 0) {
+    const timerInterval = setInterval(() => {
+        if (timer > 0) {
+            timer--;
+            timerElement.innerText = timer;
+        } else {
+            clearInterval(timerInterval);
             alert("Time's up! Your score is " + score);
             score = 0;
+            timer = 120; // Reset timer for next game if needed
         }
     }, 1000);
 
