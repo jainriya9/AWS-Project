@@ -132,15 +132,20 @@ window.onload = function() {
 
     function touchEnd(e) {
         e.preventDefault();
-        otherTile = e.target;
-        if (currTile && otherTile) {
+        if (!currTile) return;
+
+        let touch = e.changedTouches[0];
+        let touchElement = document.elementFromPoint(touch.clientX, touch.clientY);
+        otherTile = touchElement;
+
+        if (currTile && otherTile && currTile !== otherTile) {
             dragEnd();
         }
     }
 
     function touchMove(e) {
         e.preventDefault();
-        // Handle touch movement here if necessary
+        // Optional: You can add logic here to visualize dragging, if desired
     }
 
     function crushCandy() {
