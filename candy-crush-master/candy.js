@@ -61,6 +61,11 @@ window.onload = function() {
                 tile.addEventListener("drop", dragDrop);
                 tile.addEventListener("dragend", dragEnd);
 
+                // Add touch event listeners
+                tile.addEventListener("touchstart", touchStart);
+                tile.addEventListener("touchend", touchEnd);
+                tile.addEventListener("touchmove", touchMove);
+
                 document.getElementById("board").append(tile);
                 row.push(tile);
             }
@@ -118,6 +123,24 @@ window.onload = function() {
                 otherTile.src = otherImg;
             }
         }
+    }
+
+    function touchStart(e) {
+        e.preventDefault();
+        currTile = e.target;
+    }
+
+    function touchEnd(e) {
+        e.preventDefault();
+        otherTile = e.target;
+        if (currTile && otherTile) {
+            dragEnd();
+        }
+    }
+
+    function touchMove(e) {
+        e.preventDefault();
+        // Handle touch movement here if necessary
     }
 
     function crushCandy() {
