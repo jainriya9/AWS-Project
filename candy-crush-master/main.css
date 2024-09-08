@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background: url('/candy-crush-master/images/Untitled design (1).png') no-repeat center center fixed;
+    background: url('./images/Untitled design (1).png') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Arial', sans-serif;
 }
